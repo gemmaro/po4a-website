@@ -281,5 +281,15 @@ if [ "x$libver" = "x$webver" ] ; then
 	done
 fi
 
+cp src/* html
+
+find html -name '*.php.*' -and -not -name 'header.php.*' -and -not -name 'footer_*.php' | \
+    while read -r source
+    do
+        target=$(echo "$source" | sed 's/\.php\./\.html\./')
+        mkdir -p "$(dirname "$target")"
+        php "$source" > "$target"
+    done
+
 echo
 echo "XXX The pages are built now. You can browse them in html/, or upload them"
