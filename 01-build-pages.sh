@@ -172,70 +172,70 @@ get_language() {
 # https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
 	case $1 in
 		ca)
-			echo -n "català"
+			printf "català"
 			;;
 		de)
-			echo -n "Deutsch"
+			printf "Deutsch"
 			;;
 		en)
-			echo -n "English"
+			printf "English"
 			;;
 		eo)
-			echo -n "Esperanto"
+			printf "Esperanto"
 			;;
 		es)
-			echo -n "español"
+			printf "español"
 			;;
 		fr)
-			echo -n "français"
+			printf "français"
 			;;
 		hu)
-			echo -n "Magyar"
+			printf "Magyar"
 			;;
 		hr)
-			echo -n "hrvatski"
+			printf "hrvatski"
 			;;
 		it)
-			echo -n "Italiano"
+			printf "Italiano"
 			;;
 		ja)
-			echo -n "日本語"
+			printf "日本語"
 			;;
 		nb)
-			echo -n "Bokmål"
+			printf "Bokmål"
 			;;
 	        nb_NO)
-			echo -n "norsk bokmål"
+			printf "norsk bokmål"
 			;;
 		nl)
-			echo -n "Nederlands"
+			printf "Nederlands"
 			;;
 		pl)
-			echo -n "polski"
+			printf "polski"
 			;;
 		pt)
-			echo -n "Português"
+			printf "Português"
 			;;
 		pt_BR)
-			echo -n "Português (Brasil)"
+			printf "Português (Brasil)"
 			;;
 		ru)
-			echo -n "Русский"
+			printf "Русский"
 			;;
 		sr_Cyrl)
-			echo -n "српски језик"
+			printf "српски језик"
 			;;
 		uk)
-			echo -n "український"
+			printf "український"
 			;;
 		zh_CN)
-			echo -n "简体中文"
+			printf "简体中文"
 			;;
 		zh_CHS)
-			echo -n "简体中文"
+			printf "简体中文"
 			;;
 		zh_Hant)
-			echo -n "简体中文"
+			printf "简体中文"
 			;;
 		*)
 			echo "Language '$1' not supported. Change 01-build-pages.sh" >&2
