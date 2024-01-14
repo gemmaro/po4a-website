@@ -57,8 +57,11 @@ if [ "x$libver" = "x$webver" ] ; then
 	find src -name \*~ -exec rm {} \;
 	cp -a $srcdir/blib/man html
 	find html -name \*.gz -exec gunzip {} \;
-	for f in $(find html/man1 html/*/man1 -name \*.1p); do mv $f ${f%p}; done
-	mkdir -p html/en/
+
+        find html/man1 html/*/man1 -name \*.1p | \
+            while read -r f; do mv "$f" "${f%p}"; done
+
+        mkdir -p html/en/
 	mv html/man* html/en/
 	mkdir html/man
 	mkdir html/man/man1
